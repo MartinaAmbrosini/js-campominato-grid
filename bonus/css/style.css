@@ -20,8 +20,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
+}
+
+.cell-medium {
+    width: calc(100% / 9);
+    aspect-ratio: 1 ;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-hard {
+    width: calc(100% / 7);
+    aspect-ratio: 1 ;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .azure {
     background-color: lightskyblue;
 }
