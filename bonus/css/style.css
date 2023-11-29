@@ -13,7 +13,7 @@
     flex-wrap: wrap;
 }
 
-.cell {
+.cell-100 {
     width: calc(100% / 10);
     aspect-ratio: 1 ;
     border: 1px solid black;
@@ -22,7 +22,7 @@
     align-items: center;
 }
 
-.cell-medium {
+.cell-81 {
     width: calc(100% / 9);
     aspect-ratio: 1 ;
     border: 1px solid black;
@@ -31,7 +31,7 @@
     align-items: center;
 }
 
-.cell-hard {
+.cell-49 {
     width: calc(100% / 7);
     aspect-ratio: 1 ;
     border: 1px solid black;

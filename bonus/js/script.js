@@ -18,60 +18,15 @@ let gridElement = document.getElementById("grid");
 playButton.addEventListener("click",
 
     // comparsa griglia al click del playbutton
-        
+
     function(){
 
         const diff = document.getElementById("text-diff").value;
 
-        if (diff === "1") {
-            // creo ciclo per griglia
-            for (let i = 1; i <= 100; i++) {
-                const myElement = createMyelement("div", "cell");
-
-                gridElement.append(myElement);
-                myElement.append(i);
-
-                // cambio colore dei quadrati al click
-                myElement.addEventListener("click",
-                    function(){
-                        myElement.classList.add("azure");
-                        console.log(i);
-                    }
-                );
-            }   
-        } else if (diff === "2") {
-            for (let i = 1; i <= 81; i++) {
-                const myElement = createMyelement("div", "cell-medium");
-
-                gridElement.append(myElement);
-                myElement.append(i);
-
-                // cambio colore dei quadrati al click
-                myElement.addEventListener("click",
-                    function(){
-                        myElement.classList.add("azure");
-                        console.log(i);
-                    }
-                );
-            }   
-        } else {
-            for (let i = 1; i <= 49; i++) {
-                const myElement = createMyelement("div", "cell-hard");
-
-                gridElement.append(myElement);
-                myElement.append(i);
-
-                // cambio colore dei quadrati al click
-                myElement.addEventListener("click",
-                    function(){
-                        myElement.classList.add("azure");
-                        console.log(i);
-                    }
-                );
-            }   
-        }
-    }        
+        createGrid(diff);
+    }
 );
+
 
 // Definizione funzioni
 
@@ -80,4 +35,23 @@ function createMyelement(tagtype, classname){
     currentElement.classList.add(classname);
 
     return currentElement;
+}
+
+function createGrid(length) {
+
+    // creo ciclo per griglia
+    for (let i = 1; i <= length; i++) {
+        const myElement = createMyelement("div", "cell-" + length);
+
+        gridElement.append(myElement);
+        myElement.append(i);
+
+        // cambio colore dei quadrati al click
+        myElement.addEventListener("click",
+            function(){
+                myElement.classList.add("azure");
+                console.log(i);
+            }
+        );
+    }
 }
